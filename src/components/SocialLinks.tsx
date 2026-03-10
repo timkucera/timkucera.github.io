@@ -48,10 +48,10 @@ export function SocialLinks({ links, openInNewTab, email }: SocialLinksProps) {
   }
 
   return (
-    <nav aria-label="Social links" className="flex flex-wrap items-center gap-y-2">
+    <nav aria-label="Social links" className="flex flex-wrap items-center gap-y-1.5 gap-x-1">
       {items.map((item, i) => (
         <React.Fragment key={i}>
-          {i > 0 && <span aria-hidden="true" className={separatorClass}>&nbsp;·&nbsp;</span>}
+          {i > 0 && <span aria-hidden="true" className={separatorClass}>·</span>}
           {item}
         </React.Fragment>
       ))}

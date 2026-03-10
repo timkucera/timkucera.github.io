@@ -19,7 +19,7 @@ export function Hero({ personal, socialLinks, theme, layout }: HeroProps) {
         alt={personal.profileImageAlt}
         width={88}
         height={88}
-        className="w-16 h-16 md:w-[88px] md:h-[88px] rounded-full grayscale-[20%] border-3 border-neutral-700 dark:border-neutral-700"
+        className="w-20 h-20 md:w-[88px] md:h-[88px] rounded-full grayscale-[20%] border-3 border-neutral-700 dark:border-neutral-700"
         priority
       />
       <div className="mt-4 md:mt-5 space-y-1">

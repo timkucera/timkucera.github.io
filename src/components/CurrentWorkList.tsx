@@ -16,12 +16,12 @@ export function CurrentWorkList({ roles, layout }: CurrentWorkListProps) {
     <ul className="space-y-5">
       {roles.map((role) => (
         <li key={`${role.title}-${role.organization}`} className="space-y-1">
-          <div className="flex flex-wrap items-baseline gap-x-2">
+          <div>
             <span className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
               {role.title}
             </span>
             <span className="font-mono text-xs text-neutral-400 dark:text-neutral-500">
-              ·
+              {" · "}
             </span>
             {role.url ? (
               <a
