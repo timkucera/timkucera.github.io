@@ -12,7 +12,7 @@ export default function Home() {
   const { personal, socialLinks, currentWork, projects, research, contact, theme, layout, optional } = siteConfig;
 
   return (
-    <div className={`${theme.maxWidth} mx-auto px-6 md:px-8`}>
+    <div className={`${theme.maxWidth} mx-auto px-5 sm:px-6 md:px-8 overflow-x-hidden`}>
       <Hero personal={personal} socialLinks={socialLinks} theme={theme} layout={layout} />
 
       <main>

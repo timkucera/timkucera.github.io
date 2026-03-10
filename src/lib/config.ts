@@ -31,7 +31,7 @@ export const siteConfig: SiteConfig = {
     },
     {
       label: "Scholar",
-      url: "https://scholar.google.de/citations?user=ozHzaxgAAAAJ",
+      url: "https://scholar.google.com/citations?user=9Ea4hQIAAAAJ",
       ariaLabel: "Tim Kucera on Google Scholar",
     },
   ],

@@ -12,7 +12,7 @@ export function ProjectCard({ project, layout }: ProjectCardProps) {
 
   return (
     <article
-      className={`group h-full rounded-lg border p-5 transition-colors duration-150 ${
+      className={`group h-full rounded-lg border p-4 md:p-5 transition-colors duration-150 ${
         project.featured
           ? "border-neutral-300 dark:border-neutral-700 bg-neutral-50/50 dark:bg-neutral-800/30"
           : "border-neutral-200 dark:border-neutral-800 hover:border-neutral-300 dark:hover:border-neutral-700"
@@ -30,7 +30,7 @@ export function ProjectCard({ project, layout }: ProjectCardProps) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="font-mono text-[10px] px-1.5 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400"
+              className="font-mono text-[11px] px-1.5 py-0.5 rounded bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400"
             >
               {tag}
             </span>
