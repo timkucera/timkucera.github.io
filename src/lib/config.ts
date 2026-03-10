@@ -6,7 +6,7 @@ export const siteConfig: SiteConfig = {
   personal: {
     name: "Tim Kucera",
     role: "Founder, Imaginary Biolabs",
-    tagline: "Building AI infrastructure for programmable biology.",
+    tagline: "Building AI infrastructure for biological design.",
     location: "Munich, Germany",
     profileImage: "/profile.png",
     profileImageAlt: "Portrait of Tim Kucera",
