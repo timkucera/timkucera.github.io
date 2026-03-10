@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Website
 
-## Getting Started
+Minimal, configuration-driven personal homepage built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Editing Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All content is in **`src/lib/config.ts`**. Edit this single file to change:
 
-## Learn More
+- Personal info (name, role, tagline, location, profile image)
+- Social links (add, remove, or reorder)
+- Current work roles
+- Project cards (reorder by changing array position, set `featured: true` for subtle emphasis)
+- Research items and Google Scholar link
+- Contact section
+- SEO metadata (title, description, OG image URL)
 
-To learn more about Next.js, take a look at the following resources:
+Type definitions live in `src/lib/types.ts` — the config is fully typed, so your editor will catch mistakes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Theme & Layout Options
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+In `config.ts` under `theme`:
 
-## Deploy on Vercel
+| Option           | Values                         | Effect                               |
+|------------------|--------------------------------|--------------------------------------|
+| `defaultMode`    | `"light"`, `"dark"`, `"system"` | Sets color scheme behavior           |
+| `heroAlignment`  | `"center"`, `"left"`           | Hero section alignment on desktop    |
+| `maxWidth`       | Tailwind class, e.g. `"max-w-3xl"` | Page max width                  |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Under `layout`:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Option             | Effect                                              |
+|--------------------|-----------------------------------------------------|
+| `showTags`         | Show/hide project tags globally                     |
+| `openLinksInNewTab`| External links open in new tab                      |
+| `sections.*`       | Toggle visibility of each section                   |
+
+Optional sections (writing, press, notes, CV) can be toggled via `optional.*` in the config.
+
+## Profile Image
+
+Replace `public/profile.jpg` with your photo. Recommended: square, at least 176×176px.
+
+## Deploy
+
+### Vercel (recommended)
+
+```bash
+npm i -g vercel
+vercel
+```
+
+Or connect the repo to [vercel.com](https://vercel.com) for automatic deploys.
+
+### Static Export
+
+```bash
+npm run build
+```
+
+The output in `.next` can be served by any static host. For a pure static export, add `output: 'export'` to `next.config.ts`.
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css      # Tailwind imports and base styles
+│   ├── layout.tsx        # Root layout, fonts, metadata, theme script
+│   └── page.tsx          # Main page composing all sections
+├── components/
+│   ├── Hero.tsx           # Header with profile, name, links
+│   ├── SocialLinks.tsx    # Reusable link row
+│   ├── Section.tsx        # Generic section wrapper
+│   ├── CurrentWorkList.tsx
+│   ├── ProjectGrid.tsx
+│   ├── ProjectCard.tsx
+│   ├── ResearchList.tsx
+│   ├── ContactBlock.tsx
+│   ├── OptionalSection.tsx
+│   ├── ThemeProvider.tsx
+│   └── Footer.tsx
+└── lib/
+    ├── config.ts          # All site content (edit this)
+    └── types.ts           # TypeScript interfaces
+```
