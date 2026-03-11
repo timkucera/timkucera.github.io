@@ -77,12 +77,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 overflow-x-hidden`}
       >
         <ThemeProvider config={siteConfig.theme}>
-          <div className="max-w-full overflow-x-clip">
-            {children}
-          </div>
+          {children}
         </ThemeProvider>
       </body>
     </html>
