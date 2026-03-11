@@ -8,13 +8,20 @@
 }
 
 html {
-  overflow: hidden auto;
+  overflow-y: auto;
+  overflow-x: clip;
   overscroll-behavior-x: none;
 }
 
-html body {
+html,
+body {
   width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   overscroll-behavior-x: none;
+}
+
+body {
   background-color: white;
   color: #171717;
 }
