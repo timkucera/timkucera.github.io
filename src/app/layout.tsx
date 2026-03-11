@@ -80,7 +80,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100`}
       >
         <ThemeProvider config={siteConfig.theme}>
-          <div className="w-full overflow-x-clip">
+          <div className="max-w-full overflow-x-clip">
             {children}
           </div>
         </ThemeProvider>
