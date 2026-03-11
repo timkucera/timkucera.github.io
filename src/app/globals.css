@@ -9,21 +9,38 @@
 
 html {
   overflow-y: auto;
-  overflow-x: clip;
+  overflow-x: hidden;
   overscroll-behavior-x: none;
 }
 
 html,
 body {
+  margin: 0;
   width: 100%;
   max-width: 100%;
-  overflow-x: clip;
+  overflow-x: hidden;
   overscroll-behavior-x: none;
 }
 
 body {
+  position: relative;
   background-color: white;
   color: #171717;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+a,
+span,
+li {
+  overflow-wrap: anywhere;
 }
 
 html.dark body {
