@@ -8,14 +8,14 @@
 }
 
 html {
-  overflow-x: clip;
-  max-width: 100%;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 html body {
-  overflow-x: clip;
-  max-width: 100%;
-  width: 100%;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+  max-width: 100dvw;
   background-color: white;
   color: #171717;
 }
