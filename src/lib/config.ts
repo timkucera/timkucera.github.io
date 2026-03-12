@@ -77,6 +77,7 @@ export const siteConfig: SiteConfig = {
         "Microfluidic sorting technology implemented on an FPGA, for high-throughput droplet sorting on standard fluorescence microscopy systems.",
       tags: ["Microfluidics", "FPGA", "Sorting & Screening"],
       links: [
+        { label: "Website", url: "https://dropsort.github.io" }
       ],
     },
   ],
